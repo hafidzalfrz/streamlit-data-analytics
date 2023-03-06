@@ -92,7 +92,7 @@ freq = pd.DataFrame(freq_category.Quantity.droplevel(0))
 category_analysis = pd.DataFrame(superstore_data.groupby(by=['Category'])['Sales'].sum())
 
 # Set for grouped plots - figure with a 2x2 grid of Axes
-sns.set_theme(style="whitegrid")
+# sns.set_theme(style="whitegrid")
 figure, axis = plt.subplots(1, 2, figsize=(8, 5))
 # Plot barplots
 cat1 = sns.barplot(x = category_analysis.index, y = category_analysis.Sales, ax=axis[0])
